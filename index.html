@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #bdbdbd;
+        }
+               
+        .countdowm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .grid_layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 100px;
+            width: 100%;
+            max-width: 1050px;
+            height: 100vh;
+        }
+        
+        .item {
+            margin: 5px;
+            border-radius: 46px;
+            background: #bdbdbd;
+            box-shadow:  35px 35px 70px #a1a1a1,
+                        -35px -35px 70px #d9d9d9;
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            grid-row: 2 /3;
+        }        
+        
+        h1 {
+            text-align: center;
+            font-size: 5em;
+            font-weight: normal;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section class="countdowm"> 
+        <h1>Countdown</h1>      
+        <div class="grid_layout">
+            <div class="item days"></div>
+            <div class="item hours"></div>
+            <div class="item minutes"></div>
+            <div class="item seconds"></div>
+        </div>
+    </section>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
